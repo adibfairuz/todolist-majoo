@@ -1,0 +1,16 @@
+@for $i from 1 through 10 {
+    @if $i <= 9 {
+        .fs-0#{$i} {
+            font-size: $i/10+em;
+        }
+        .fs-1#{$i} {
+            font-size: 1+$i/10+em;
+        }
+        .font-weight-#{$i}00 {
+            font-weight: $i*100 !important;
+        }
+    }
+    .fs-#{$i} {
+        font-size: $i+em;
+    }
+}

@@ -63,7 +63,7 @@ export default function crudReducer(state = initialState, action = {}) {
         case actions.GET_ITEM_SUCCESS:
             return {
                 ...state,
-                items: {
+                item: {
                     data: payload.item,
                     loading: false,
                     error: false
