@@ -102,7 +102,6 @@ function TodoList() {
                 id,
             },
             callback: (data) => {
-                console.log(data)
                 setForm({
                     title: data.item.title,
                     description: data.item.description

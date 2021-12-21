@@ -18,7 +18,6 @@ function AddTodo() {
     }
 
     const handleSubmit = (e) => {
-        console.log(form)
         e.preventDefault()
         dispatch(addItem({
             params: form,
