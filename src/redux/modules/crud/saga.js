@@ -48,7 +48,7 @@ export function* getAllItems(action) {
 
 export function* getItem(action) {
     const items = [...yield select(itemsSelector)]
-    const item = items?.find(item => item.id === action.payload?.params?.id)
+    const item = items?.find(item => item.id.toString() === action.payload?.params?.id.toString())
     yield put({
         type: actions.GET_ITEM_SUCCESS,
         payload: {

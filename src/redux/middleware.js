@@ -1,6 +1,6 @@
 const middleware = () => next => action => {
   const { type, payload } = action;
-  console.log(action)
+  // console.log(action)
   if (type.includes('SUCCESS')) {
     if (payload.callback) {
       payload.callback(payload, false)
