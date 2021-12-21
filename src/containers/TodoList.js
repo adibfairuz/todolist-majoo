@@ -96,14 +96,12 @@ function TodoList() {
     };
 
     const handleShowModal = (id) => {
-        console.log(id, "iddd")
         setSelectedItem({...items.find(item => item.id.toString() === id.toString()),})
         dispatch(getItem({
             params: {
                 id,
             },
             callback: (data) => {
-                console.log(data)
                 setForm({
                     title: data.item.title,
                     description: data.item.description
@@ -112,8 +110,6 @@ function TodoList() {
         }))
         setShowModal(true)
     }
-
-    console.log(selectedItem)
   
     return (
         <div>
