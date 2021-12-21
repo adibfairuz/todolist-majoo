@@ -96,6 +96,7 @@ function TodoList() {
     };
 
     const handleShowModal = (id) => {
+        console.log(id, "iddd")
         setSelectedItem({...items.find(item => item.id.toString() === id.toString()),})
         dispatch(getItem({
             params: {
@@ -111,6 +112,8 @@ function TodoList() {
         }))
         setShowModal(true)
     }
+
+    console.log(selectedItem)
   
     return (
         <div>
